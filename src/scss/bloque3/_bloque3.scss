@@ -1,0 +1,79 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+@keyframes infiniteScroll {
+  from {transform: translateX(0)}
+  to {transform: translateX(-50%)}
+}
+
+.bloque3 {
+  height: 7rem;
+  width: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+.bloque3Container {
+  display: flex;
+  font-size: 40px;
+  width: 4600px;
+  animation-name: infiniteScroll;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.bloque3Text {
+  white-space: nowrap;
+  margin-right: 7rem;
+}
+
+// .bloque3 {
+//   // height: 18rem;
+//   height: 5rem;
+//   background-color: white;
+//   overflow: hidden;
+//   .bloque3Text {
+//     font-family: 'Poppins', sans-serif;
+//     // font-size: 6rem;
+//     font-size: 3rem;
+//     height: 100%;
+//     width: 300rem;
+//     position: block;
+//     // padding-top: 5.3rem;
+//     padding-top: .5rem;
+
+//     font-weight: 600;
+//     // transform: translateX(-50%);
+//     animation: animation-cayetano 13s linear infinite;
+//     // @include m.phone_375 {
+//     //   padding-top: 7rem;
+//     //   font-size: 7rem;
+//     // }
+//     @include m.desktop_1020 {
+//       padding-top: 0.5rem;
+//       font-size: 3rem;
+//     }
+//   }
+// }
+
+// @keyframes animation-cayetano {
+//   from {
+//     transform: translateX(35rem); 
+//   }
+//   to {
+//     transform: translateX(-60%);
+//   }
+// }
+
+// @include m.desktop_1020 {
+//   @keyframes animation-cayetano {
+//     from {
+//       transform: translateX(105rem); 
+//     }
+//     to {
+//       transform: translateX(-100%);
+//     }
+//   }
+  
+// }

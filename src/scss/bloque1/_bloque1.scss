@@ -1,0 +1,370 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bloque1 {
+  // background-color: red;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 4rem;
+  position: relative;
+  background-color: v.$color1;
+  @include m.desktop_1020 {
+    padding: 4rem 0;
+    display: grid;
+    justify-content: center;
+    
+  }
+}
+
+.bloque1DesktopImage1 {
+  display: none;
+  @include m.desktop_1020 {
+    display: block;
+    position: absolute;
+    top: -12rem;
+    left: -8rem;
+    z-index: 0;
+    img {
+      width: 55rem;
+      @include m.desktop_1360 {
+        width: 63rem;
+      }
+    }
+  }
+}
+
+.bloque1DesktopImage2 {
+  display: none;
+  @include m.desktop_1020 {
+    display: block;
+    position: absolute;
+    bottom: -25rem;
+    right: -24rem;
+    z-index: 0;
+    img {
+      width: 70rem;
+      @include m.desktop_1360 {
+        width: 81rem;
+      }
+    }
+  }
+}
+
+.bloque1Container {
+  // background-color: yellow;
+  @include m.desktop_1020 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: v.$max-width-1020;
+    height: 60rem;
+  }
+  @include m.desktop_1280 {
+    height: 60rem;  
+  }
+  @include m.desktop_1360 {
+    width: v.$max-width-1360;
+    height: 75rem;
+  }
+}
+
+.bloque1Open {
+  height: 30rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include m.phone_380 {
+    height: 35rem;
+  }
+  @include m.desktop_1020 {
+    height: 100%;
+  }
+  img {
+    position: absolute;
+    width: 23rem;
+    @include m.phone_375 {
+      width: 25rem;
+    }
+    @include m.phone_390 {
+      width: 28rem;  
+    }
+    @include m.phone_414 {
+      width: 31rem;  
+    }
+  }
+  .open_top{
+    @include m.desktop_1020 {
+      display: none;
+    }
+  }
+  .bloque1Desktop {
+    display: none;
+    top: -1rem;
+    @include m.desktop_1020 {
+      display: block;
+      width: 40rem;
+      left: 3rem;
+      position: relative;
+    }
+    @include m.desktop_1280 {
+      width: 45rem;
+    }
+    @include m.desktop_1360 {
+      width: 52rem;
+    }
+  }
+}
+
+.logo_top {
+  position: absolute;
+  width: 15rem !important;
+  top: 1.5rem;
+  left: 2rem;
+  @include m.phone_380 {
+    left: 3.5rem;
+    top: 2rem;
+    width: 17rem !important;
+  }
+  @include m.desktop_1020 {
+    width: 21rem !important;
+    top: 0;
+  }
+  @include m.desktop_1360 {
+    width: 25rem !important;
+    top: 3rem;
+  }
+}
+
+.blooque1Fecha {
+  height: 7rem;
+  // background-color: yellow;
+  position: absolute;
+  bottom: 1rem;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  // background-color: red;
+  text-align: center;
+  @include m.phone_380 {
+    bottom: 2rem;
+  }
+  @include m.desktop_1020 {
+    padding-left: 5rem;
+    bottom: 5rem;
+  }
+  @include m.desktop_1360 {
+    bottom: 08rem;
+  }
+  .padd_left {
+    @include m.desktop_1360 {
+      padding-left: 1rem;
+    }
+  }
+  h3 {
+    margin: 0;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+    @include m.desktop_1020 {
+      font-size: 2.2rem;
+      padding-bottom: 1rem;
+    }
+    span {
+      font-weight: 800;
+    }
+  
+}
+h2 {
+  margin: 0;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  @include m.desktop_1020 {
+    font-size: 1.5rem;
+  
+  }
+  span {
+    font-weight: 800;
+  }
+}
+  .blooque1Fecha__bottom {
+    border-top: 2px solid black;
+    padding-top: .5rem;
+    .blooque1Fecha__bottomOther {
+      @include m.desktop_1020 {
+        background-color: black;
+      }
+    }
+    @include m.desktop_1020 {
+      padding-top: 1rem;
+      display: none;
+      grid-template-columns: 49.75% .5% 49.75%;
+    }
+  }
+  .blooque1Fecha__bottom__desktop {
+    display: none;
+    .blooque1Fecha__bottomOther {
+      @include m.desktop_1020 {
+        background-color: black;
+      }
+    }
+    @include m.desktop_1020 {
+      padding-top: 1rem;
+      display: grid;
+      grid-template-columns: 49.75% .5% 49.75%;
+      h3 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.bloque1Form {
+  // background-color: red;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 2rem;
+  @include m.desktop_1280 {
+    align-items: center;
+  }
+}
+
+.formContainer {
+  height: auto;
+  width: 28rem;
+  // background-color: v.$color1;
+  background-color: white; 
+  border-top-right-radius: 2.5rem;
+  border-bottom-left-radius: 2.5rem;
+  padding: 2rem 0;
+  display: grid;
+  justify-items: center;
+  row-gap: 1rem;
+  @include m.phone_380 {
+    row-gap: 2rem;
+  }
+  @include m.phone_380 {
+    width: 33rem;
+  }
+  @include m.desktop_1020 {
+     
+    z-index: 100;
+  }
+  @include m.desktop_1360 {
+    width: 38rem;
+  }
+}
+
+.formTitle {
+  // background-color: green;
+  height: 4rem;
+  width: 80%;
+  display: grid;
+  text-align: center;
+  h3, h4{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    color: black;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    @include m.phone_380 {
+      font-size: 1.8rem;
+    }
+  }
+  h4 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    @include m.phone_380 {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.formGrid {
+  // background-color: purple;
+  height: auto;
+  width: 80%;
+  display: grid;
+  row-gap: 1.5rem;
+  .formGridDouble {
+    width: 100%;
+    height: 2.7rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    color: black !important;
+  }
+  input, select {
+    width: 100%;
+    height: 2.7rem;
+    outline: none;
+    border: 1px solid black;
+    border-radius: .5rem;
+    background-color: transparent;
+    padding-left: .5rem;
+    color: black !important;
+    &::placeholder {
+      color: black;
+      font-weight: 500;
+      font-size: .9rem;
+      @include m.phone_380 {
+        font-size: 1.1rem;
+      }
+    }
+    @include m.phone_380 {
+      height: 3.2rem;
+    }
+  }
+}
+
+.formTerminos {
+  height: 3rem;
+  // background-color: green;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1.3rem auto;
+  label {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    a {
+      font-size: 1.25rem;
+      padding-left: 1rem;
+      color: black;
+      &::selection {
+        color: black;
+      }
+    }
+  }
+}
+
+.formButton {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  button  {
+    height: 4rem;
+    width: 20rem;
+    border-radius: 1rem;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    h3 {
+      font-weight: 400;
+      font-size: 1.5rem;
+      margin: 0;
+      color: white;
+    }
+  }
+}
+

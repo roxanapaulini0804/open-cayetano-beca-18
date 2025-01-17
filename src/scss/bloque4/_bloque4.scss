@@ -1,0 +1,67 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bloque4 {
+  background-color: black;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0 2rem 0;
+}
+
+
+.bloque4Container {
+  width: 100%;
+  // background-color: yellow;
+}
+
+.bloque4ContainerLogos {
+  display: grid;
+  justify-items: center;
+  row-gap: 2rem;
+  @include m.phone_390 {
+    display: flex;
+    justify-content: space-around;
+  }
+  img {
+    text-align: center;
+    width: 12rem;
+  }
+  .logo_left {
+    width: 23rem;
+    padding-left: .5rem;
+  }
+  .logo_right {
+    display: none;
+    @include m.desktop_1020 {
+      display: block;
+    }
+  }
+
+}
+
+
+.bloque4ContainerText {
+  // background-color: yellow;
+  height: 6rem;
+  padding: 2rem 0;
+  h3 {
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0 2rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+      &:active {
+        color: white;
+      }
+      :focus {
+        color: white;
+      }
+    }
+  }
+}
