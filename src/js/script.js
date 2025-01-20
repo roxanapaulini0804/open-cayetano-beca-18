@@ -84,96 +84,31 @@ window.addEventListener("load", () => {
         return input.options.add(opt);
     }
 
-    let inputElement = document.getElementById('LEADCF6');
-    let inputHorarios = document.getElementById('LEADCF22');
+    let inputElement = document.getElementById('LEADCF220');
+    let inputHidden = document.getElementById('formTerminosSalud');
 
     inputElement.addEventListener("change", () => {
 
         let carrerasConHorario = [
+            "MEDICINA",
+            "ENFERMERIA",
+            "ESTOMATOLOGIA",
             "PSICOLOGIA", 
-            "EDUCACION",
-            "ADMINISTRACION", 
-            "ADMINISTRACION EN SALUD", 
-            "BIOLOGIA", 
-            "INGENIERIA AMBIENTAL", 
-            "INGENIERIA INDUSTRIAL", 
-            "INGENIERIA BIOMEDICA", 
-            "INGENIERIA INFORMATICA", 
-            "FARMACIA Y BIOQUIMICA",
-            "NUTRICION",
             "MEDICINA VETERINARIA Y ZOOTECNIA",
-
+            "TERAPIA FISICA Y REHABILITACION",
+            "RADIOLOGIA",
+            "LABORATORIO CLINICO",
+            "TERAPIA OCUPACIONAL",
+            "TERAPIA DE AUDICION, VOZ Y LENGUAJE"  
         ];
 
         if(carrerasConHorario.includes(inputElement.value)) {
-            removeOptions(inputHorarios);
-            inputHorarios.style.backgroundColor = "white";
-            if( inputElement.value === "PSICOLOGIA" ){
-                inputHorarios.disabled = false;
-                createFirstOption(inputHorarios);
-                inputHorarios.add(new Option("10:30 a.m. - Psicólogos en acción", "10:30 A.M. - Psicólogos en acción"));
-            } else if( inputElement.value === "EDUCACION" ) {
-                inputHorarios.disabled = false;
-                createFirstOption(inputHorarios);
-                inputHorarios.add(new Option("10:30 a.m. - Inteligencia Artificial en Educación", "10:30 A.M. - Inteligencia Artificial en Educación"));
-            } else if( inputElement.value === "ADMINISTRACION" ) {
-                inputHorarios.disabled = false;
-                createFirstOption(inputHorarios);
-                inputHorarios.add(new Option("10:30 a.m. - Producto innovador con lego 1", "10:30 A.M. - Producto innovador con lego 1"));
-                inputHorarios.add(new Option("11:30 a.m. - Producto innovador con lego 2", "11:30 A.M. - Producto innovador con lego 2"));
-                inputHorarios.add(new Option("12:30 a.m. - Producto innovador con lego 3", "12:30 A.M. - Producto innovador con lego 3"));
-            } else if( inputElement.value === "ADMINISTRACION EN SALUD" ) {
-                inputHorarios.disabled = false;
-                createFirstOption(inputHorarios);
-                inputHorarios.add(new Option("10:30 a.m. - Toma de decisiones en crisis", "10:30 A.M. - Toma de decisiones en crisis"));
-            } else if( inputElement.value === "BIOLOGIA" ) {
-                inputHorarios.disabled = false;
-                createFirstOption(inputHorarios);
-                inputHorarios.add(new Option("10:30 a.m. - Extracción de ADN 1", "10:30 A.M. - Extracción de ADN 1"));
-                inputHorarios.add(new Option("11:30 a.m. - Extracción de ADN 2", "11:30 A.M. - Extracción de ADN 2"));
-            } else if( inputElement.value === "INGENIERIA AMBIENTAL" ) {
-                inputHorarios.disabled = false;
-                createFirstOption(inputHorarios);
-                inputHorarios.add(new Option("10:30 a.m. - Gennerando energía eléctrica limpia 1", "10:30 A.M. - Gennerando energía eléctrica limpia 1"));
-                inputHorarios.add(new Option("11:30 a.m. - Gennerando energía eléctrica limpia 2", "11:30 A.M. - Gennerando energía eléctrica limpia 2"));
-            } else if( inputElement.value === "INGENIERIA INDUSTRIAL" ) {
-                inputHorarios.disabled = false;
-                createFirstOption(inputHorarios);
-                inputHorarios.add(new Option("10:40 a.m. - Restricciones en la línea de producción 1", "10:40 A.M. - Restricciones en la línea de producción 1"));
-                inputHorarios.add(new Option("11:40 a.m. - Restricciones en la línea de producción 2", "11:40 A.M. - Restricciones en la línea de producción 2"));
-            } else if( inputElement.value === "INGENIERIA INFORMATICA" ) {
-                inputHorarios.disabled = false;
-                createFirstOption(inputHorarios);
-                inputHorarios.add(new Option("10:30 a.m. - Realidad virtual con visores 1", "10:30 A.M. - Realidad virtual con visores 1"));
-                inputHorarios.add(new Option("11:30 a.m. - Realidad virtual con visores 2", "11:30 A.M. - Realidad virtual con visores 2"));
-            } else if( inputElement.value === "INGENIERIA BIOMEDICA" ) {
-                inputHorarios.disabled = false;
-                createFirstOption(inputHorarios);
-                inputHorarios.add(new Option("10:30 a.m. - Ingeniería de tejidos y medicina regenerativa", "10:30 A.M. - Ingeniería de tejidos y medicina regenerativa"));
-                inputHorarios.add(new Option("11:30 a.m. - Comprendiendo las señales biomedicas", "11:30 A.M. - Comprendiendo las señales biomedicas"));
-            } else if( inputElement.value === "FARMACIA Y BIOQUIMICA" ) {
-                inputHorarios.disabled = false;
-                createFirstOption(inputHorarios);
-                inputHorarios.add(new Option("10:30 a.m. - Elabora tu propio ungüento de eucalipto", "10:30 A.M. - Elabora tu propio ungüento de eucalipto"));
-                inputHorarios.add(new Option("11:30 a.m. - Fabrica tabletas de calidad con facilidad", "11:30 A.M. - Fabrica tabletas de calidad con facilidad"));
-            } else if( inputElement.value === "MEDICINA VETERINARIA Y ZOOTECNIA" ) {
-                inputHorarios.disabled = false;
-                createFirstOption(inputHorarios);
-                inputHorarios.add(new Option("10:30 a.m. - Ecografía en ovinos 1", "10:30 A.M. - Ecografía en ovinos 1"));
-                inputHorarios.add(new Option("11:15 a.m. - Ecografía en ovinos 2", "11:15 A.M. - Ecografía en ovinos 2"));
-                inputHorarios.add(new Option("12:00 a.m. - Visita por la Facultad", "12:00 A.M. - Visita por la Facultad"));
-            } else if( inputElement.value === "NUTRICION" ) {
-                inputHorarios.disabled = false;
-                createFirstOption(inputHorarios);
-                inputHorarios.add(new Option("10:30 a.m. - Regula tus emociones a través de la Nutrición", "10:30 A.M. - Regula tus emociones a través de la Nutrición"));
-                inputHorarios.add(new Option("11:30 a.m. - Sé un detective de la Nutrición", "11:30 A.M. - Sé un detective de la Nutrición"));
-            } else {
-            }
+            inputHidden.style.display = 'grid';
         }else {
             if(!carrerasConHorario.includes(inputElement.value)) {
-                inputHorarios.style.backgroundColor = "gray";
+                inputHidden.style.display = 'none';
             }
-            inputHorarios.disabled = true;
+            inputHidden.style.display = 'none';
         }
     })
 

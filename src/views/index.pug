@@ -116,6 +116,10 @@ html(lang="es")
                                 option(value='4to de secundaria') 4to. de secundaria
                                 option(value='3ro de secundaria') 3ro. de secundaria
                                 option(value='Ya termine el colegio') Ya terminé el colegio 
+                            .formTerminos#formTerminosSalud(style="display:none")
+                                input#privacyTool3503766000237491098(type='checkbox' autocomplete='off' name='privacyTool', class="oprimido")
+                                label#labelCheckbox(for='privacyTool3503766000237491098')
+                                    a(href="https://cayetano.edu.pe/politica-privacidad/" target="_blank") Quiero Participar en la charla
                             //inputs hidden
                             input#LEADCF183(type='hidden' name='LEADCF183' value='')
                             input#LEADCF189(type='hidden' name='LEADCF189' value='')
@@ -136,6 +140,9 @@ html(lang="es")
                                 button 
                                     h3 ¡Quiero participar!
                             script.
+
+                                
+
                                 //- console.log(document.getElementById('tipo-eventos').value)
                                 let url = window.location.href
                                 let urlValue = document.getElementById('LEADCF168');
@@ -426,6 +433,8 @@ html(lang="es")
                             // OTHER SCRIPT
                             // Do not remove this code.
                             iframe(name='captchaFrame' style='display:none;')
+        .bloque5
+            h3 Hemos culminado con el proceso de postulación para el examen de medicina. Pero te invitamos a explorar nuestras otras 9 carreras de Salud.
         .bloque2
             .bloque2ContainerMovil
                 .bloque2ContainerMovilGrid
