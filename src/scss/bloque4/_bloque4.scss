@@ -7,6 +7,9 @@
   display: flex;
   justify-content: center;
   padding: 3rem 0 2rem 0;
+  @include m.desktop_1400 {
+    height: 15rem;
+  }
 }
 
 
@@ -37,22 +40,15 @@
       display: block;
     }
   }
-
-}
-
-
-.bloque4ContainerText {
-  // background-color: yellow;
-  height: 6rem;
-  padding: 2rem 0;
   h3 {
+    padding: 2rem;
     color: white;
     margin: 0;
     text-align: center;
     font-size: 1.3rem;
     font-weight: 500;
-    padding: 0 2rem;
-
+    display: flex;
+    align-items: center;
     a {
       color: white;
       text-decoration: none;
@@ -64,4 +60,12 @@
       }
     }
   }
+}
+
+
+.bloque4ContainerText {
+  // background-color: yellow;
+  height: 6rem;
+  padding: 2rem 0;
+  
 }
